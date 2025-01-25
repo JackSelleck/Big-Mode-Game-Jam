@@ -92,7 +92,7 @@ public class TypewriterEffect : MonoBehaviour /// Creates the "typewriter effect
 
         StopCoroutine(_typewriterCorutine);
         _textBox.maxVisibleCharacters = _textBox.textInfo.characterCount;
-        _readyForNewText = true;
+        // _readyForNewText = true;
         // The question mark makes it check if it is null before invoking which stops null reference exceptions
         CompleteTextRevealed?.Invoke();
     }
@@ -137,7 +137,7 @@ public class TypewriterEffect : MonoBehaviour /// Creates the "typewriter effect
                 _textBox.maxVisibleCharacters++;
                 yield return _textboxFullEventDelay;
                 CompleteTextRevealed?.Invoke();
-                _readyForNewText = true;
+                // _readyForNewText = true;
                 yield break;
             }
 
