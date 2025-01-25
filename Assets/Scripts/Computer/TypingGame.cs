@@ -12,6 +12,7 @@ public class TypingGame : MonoBehaviour
     {
         decideText = Random.Range(0, 20);
         DecideText();
+        playersText.Select();
     }
     private void DecideText()
     {
