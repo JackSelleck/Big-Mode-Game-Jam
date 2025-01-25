@@ -1,2 +1,2 @@
 # Big-Mode-Game-Jam
-Our game for the big mode game jam
+Our game for the Bigmode game jam
