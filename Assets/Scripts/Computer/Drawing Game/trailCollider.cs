@@ -34,6 +34,7 @@ public class trailCollider : MonoBehaviour
         else
         {
             validCollider = new GameObject("TrailCollider", typeof(EdgeCollider2D)).GetComponent<EdgeCollider2D>();
+            transform.SetParent(validCollider.transform);
         }
         return validCollider;
     }
@@ -62,5 +63,10 @@ public class trailCollider : MonoBehaviour
             myCollider.enabled = false;
             unusedColliders.Add(myCollider);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("colllided");
     }
 }
