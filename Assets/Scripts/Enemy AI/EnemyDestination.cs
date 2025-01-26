@@ -5,8 +5,10 @@ namespace Enemy_AI
 {
     public class EnemyDestination : GhostBase
     {
-        private bool lineOfSight = false;
         [SerializeField] private float speed = 2.0f;
+        
+        [SerializeField] private GameObject PlayerRef;
+        private bool lineOfSight = false;
 
         private void Update()
         {
