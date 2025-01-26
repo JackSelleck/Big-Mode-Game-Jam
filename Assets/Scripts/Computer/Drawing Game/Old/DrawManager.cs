@@ -10,7 +10,8 @@ public class DrawManager : MonoBehaviour
     public List<GameObject> TrailList = new List<GameObject>();
     private Plane planeObj;
     private Vector3 mousePos;
-    Rigidbody2D rb;
+
+    public bool trailIsActive = false;
 
     void Start()
     {
@@ -36,14 +37,21 @@ public class DrawManager : MonoBehaviour
             }
 
         }
+        else
+        {
+            trailRenderer.emitting = false;
+            trailIsActive = false;
+        }
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began || Input.GetMouseButton(0))
         {
             Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             trailRenderer.emitting = true;
+            trailIsActive = true;
         }
         else
         {
             trailRenderer.emitting = false;
+            trailIsActive = false;
         }
     }
 }
