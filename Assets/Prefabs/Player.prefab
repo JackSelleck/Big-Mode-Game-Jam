@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4184565732773891416}
   - component: {fileID: 1166610102564211222}
-  - component: {fileID: 4361217739134819048}
   - component: {fileID: 4966173498127412877}
   - component: {fileID: 2134540999576319227}
   - component: {fileID: 5887756380508927163}
+  - component: {fileID: 4361217739134819048}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,23 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4361217739134819048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3429702692842296134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0cb2cb65ab51d40b6522d7c0b03d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  FacingDown: 0
-  FacingUp: 0
-  FacingRight: 0
-  FacingLeft: 0
 --- !u!95 &4966173498127412877
 Animator:
   serializedVersion: 7
@@ -203,3 +186,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4361217739134819048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429702692842296134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0cb2cb65ab51d40b6522d7c0b03d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  FacingDown: 0
+  FacingUp: 0
+  FacingRight: 0
+  FacingLeft: 0
