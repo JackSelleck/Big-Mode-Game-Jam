@@ -4,7 +4,7 @@ namespace Enemy_AI
 {
     public class GhostBase : MonoBehaviour
     {
-        public GameObject PlayerRef;
+        // public GameObject PlayerRef;
         
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
