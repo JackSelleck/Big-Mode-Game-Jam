@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Enemy_AI
 {
@@ -10,11 +11,19 @@ namespace Enemy_AI
         [SerializeField] private GameObject PlayerRef;
         private bool lineOfSight = false;
 
+        private NavMeshAgent agent;
+        private void Start()
+        {
+            agent = GetComponent<NavMeshAgent>();
+            agent.updateRotation = false;
+            agent.updateUpAxis = false;
+        }
         private void Update()
         {
-            if (!lineOfSight) return;
+            if (!lineOfSight || !agent.isOnNavMesh) return;
 
-            transform.position = Vector2.MoveTowards(transform.position, PlayerRef.transform.position, speed * Time.deltaTime);
+            agent.SetDestination(PlayerRef.transform.position);
+            // transform.position = Vector2.MoveTowards(transform.position, PlayerRef.transform.position, speed * Time.deltaTime);
         }
 
         private void FixedUpdate()
