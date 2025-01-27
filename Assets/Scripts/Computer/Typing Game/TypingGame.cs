@@ -8,7 +8,7 @@ public class TypingGame : MonoBehaviour
     private int decideText;
     public TextMeshProUGUI text;
     public TMP_InputField playersText;
-    public void StartTask()
+    public void Start()
     {
         decideText = Random.Range(0, 20);
         DecideText();
