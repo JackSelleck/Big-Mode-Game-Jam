@@ -5083,6 +5083,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1166610102564211222, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166610102564211222, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166610102564211222, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
+      propertyPath: m_Color.r
+      value: 0.97404873
+      objectReference: {fileID: 0}
     - target: {fileID: 3429702692842296134, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5410,22 +5422,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost_R
       objectReference: {fileID: 0}
-    - target: {fileID: 416120785516857981, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3515659305242033685, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3515659305242033685, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
-      propertyPath: m_CompositeOperation
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355767732087673705, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1279902789483874651, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
+      propertyPath: 'waypoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2128660786}
+    - target: {fileID: 1279902789483874651, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
+      propertyPath: 'waypoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 717281267}
+    - target: {fileID: 1279902789483874651, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
+      propertyPath: 'waypoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2096811938}
+    - target: {fileID: 1279902789483874651, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
+      propertyPath: 'waypoints.Array.data[3]'
+      value: 
+      objectReference: {fileID: 748960119}
     - target: {fileID: 7388791217256713266, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.8749282
@@ -5467,43 +5479,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7736482229842358587, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
-      propertyPath: Patrol
-      value: 
-      objectReference: {fileID: 2032088786}
-    - target: {fileID: 7736482229842358587, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
       propertyPath: PlayerRef
       value: 
       objectReference: {fileID: 1640682872}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 416120785516857981, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2032088786}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
---- !u!1 &2032088785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 416120785516857981, guid: 8264fe5ff563bbc4286d2669e2de96c9, type: 3}
-  m_PrefabInstance: {fileID: 2032088784}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2032088786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032088785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f229c85f914582a613462ae7366298, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 2128660786}
-  - {fileID: 717281267}
-  - {fileID: 2096811938}
-  - {fileID: 748960119}
 --- !u!1 &2069701979
 GameObject:
   m_ObjectHideFlags: 0
