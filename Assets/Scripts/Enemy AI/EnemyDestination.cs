@@ -7,8 +7,10 @@ namespace Enemy_AI
     public class EnemyDestination : GhostBase
     {
         [SerializeField] private float speed = 2.0f;
-        
+
         [SerializeField] private GameObject PlayerRef;
+        [SerializeField] private EnemyPatrolling Patrol;
+        
         private bool lineOfSight = false;
 
         private NavMeshAgent agent;
@@ -20,10 +22,17 @@ namespace Enemy_AI
         }
         private void Update()
         {
-            if (!lineOfSight || !agent.isOnNavMesh) return;
+            if (!agent.isOnNavMesh) return;
 
-            agent.SetDestination(PlayerRef.transform.position);
-            // transform.position = Vector2.MoveTowards(transform.position, PlayerRef.transform.position, speed * Time.deltaTime);
+            switch (lineOfSight)
+            {
+                case true:
+                    agent.SetDestination(PlayerRef.transform.position);
+                    break;
+                case false when agent.remainingDistance < 0.5f:
+                    Patrol.FollowWayPoints(agent);
+                    break;
+            }
         }
 
         private void FixedUpdate()
@@ -32,16 +41,9 @@ namespace Enemy_AI
             
             if (hit.collider == null) return;
             
-            if (hit.collider.gameObject == PlayerRef)
-            {
-                Debug.DrawRay(transform.position, PlayerRef.transform.position - transform.position, Color.red);
-                lineOfSight = true;
-            }
-            else
-            {
-                Debug.DrawRay(transform.position, PlayerRef.transform.position - transform.position, Color.green);
-                lineOfSight = false;
-            }
+            lineOfSight = hit.collider.gameObject == PlayerRef;
+            
+            Debug.DrawRay(transform.position, PlayerRef.transform.position - transform.position, lineOfSight ? Color.red: Color.clear);
         }
     }
 }
