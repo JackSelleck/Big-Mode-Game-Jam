@@ -22,6 +22,10 @@ public class ChooseRandomTask : MonoBehaviour
         {
             SceneManager.LoadScene("Drawing Game");
         }
+        if (taskDecider == 2)
+        {
+            SceneManager.LoadScene("Maze Game");
+        }
     }
 
 }

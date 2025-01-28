@@ -26,19 +26,8 @@ public class PlayerInputHandler : MonoBehaviour
     public static Vector2 LookInput { get; set; }
     public static bool AttackInput { get; set; }
 
-    public static PlayerInputHandler Instance { get; private set; }
-
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
 
         moveAction = PlayerControls.FindActionMap(actionMapName).FindAction(Move);
         lookAction = PlayerControls.FindActionMap(actionMapName).FindAction(Look);
