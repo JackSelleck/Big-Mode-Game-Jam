@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ball
   - TriggerEvent
+  - Papers
+  - Computer
   layers:
   - Default
   - TransparentFX
