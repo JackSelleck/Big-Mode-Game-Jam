@@ -11,7 +11,7 @@ namespace Enemy_AI
         private int waypointIndex = 0;
         
         
-        public void GetRandomWayPoint(NavMeshAgent agent)
+        public void FollowWayPoints(NavMeshAgent agent)
         {
             if (!(agent.remainingDistance < 0.5f)) return;
             
