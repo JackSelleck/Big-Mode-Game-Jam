@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Enemy_AI
 {
-    public class GhostRedBehaviour : GhostBase
+    public class GhostRed : GhostBase
     {
         protected void OnTriggerEnter2D(Collider2D other)
         {
