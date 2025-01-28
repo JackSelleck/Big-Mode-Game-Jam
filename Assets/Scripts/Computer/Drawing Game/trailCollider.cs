@@ -55,12 +55,12 @@ public class trailCollider : MonoBehaviour
         collider.SetPoints(points);
     }
 
-    void OnDestroy()
+    /*void OnDestroy()
     {
         if (myCollider != null)
         {
             myCollider.enabled = false;
             unusedColliders.Add(myCollider);
         }
-    }
+    }*/
 }
