@@ -12,7 +12,7 @@ namespace Enemy_AI
         private void RedGhostAttack()
         {
             //TODO damage the player work. Somehow.
-            
+            Debug.Log("Red ghost attack");
             GhostTouch(this);
         }
     }
