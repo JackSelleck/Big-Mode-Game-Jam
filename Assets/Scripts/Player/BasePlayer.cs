@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
@@ -11,6 +12,9 @@ namespace Player
 
         [SerializeField] private Transform RespawnPoint;
         
+        private Rigidbody2D rb;
+        private SpriteRenderer sr;
+        
 
         public UnityAction OnPlayerDeath;
         public UnityAction OnPlayerRespawn;
@@ -19,6 +23,9 @@ namespace Player
         {
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
+
+            rb = GetComponent<Rigidbody2D>();
+            sr = GetComponent<SpriteRenderer>();
         }
 
         private void OnEnable() => OnPlayerDeath += PlayerDeath;
@@ -28,19 +35,28 @@ namespace Player
 
         private void PlayerDeath()
         {
-            //TODO implement player death
             //TODO lose all progress. Somehow.
-
-            
             gameObject.SetActive(false);
             Debug.Log("Player dead");
+
+
+            //TODO experiment with this later.
+            // sr.enabled = false;
+            // rb.bodyType = RigidbodyType2D.Static;
+            //lerp the player color from yellow to clear
             
             // PlayerRespawn();
             // StartCoroutine(PlayerRespawn());
-            Invoke(nameof(PlayerRespawn), 2);
+            // Invoke(nameof(PlayerRespawn), 2);
+            
+            //TODO instead of respawn. Just reload the scene.
+            
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
         }
-        
-        private void PlayerRespawn()
+
+
+        public void PlayerRespawn()
         {
             transform.position = RespawnPoint.position;
             gameObject.SetActive(true);
@@ -48,8 +64,5 @@ namespace Player
             OnPlayerRespawn?.Invoke();
             // yield return new WaitForSeconds(2);
         }
-        
-
-        
     }
 }
