@@ -35,9 +35,9 @@ namespace Player
             gameObject.SetActive(false);
             Debug.Log("Player dead");
             
-            PlayerRespawn();
+            // PlayerRespawn();
             // StartCoroutine(PlayerRespawn());
-            
+            Invoke(nameof(PlayerRespawn), 2);
         }
         
         private void PlayerRespawn()
