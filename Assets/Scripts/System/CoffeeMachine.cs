@@ -1,15 +1,15 @@
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace System
 {
     public class CoffeeMachine : MonoBehaviour
     {
-        [SerializeField] private CoffeeManager coffeeManager;
+        // [SerializeField] private CoffeeManager coffeeManager;
         
         private void OnTriggerEnter2D(Collider2D other)
         {
             Debug.Log("Refill coffee");
-            if (other.gameObject.CompareTag("TriggerEvent")) coffeeManager.RefillCoffee();
+            if (other.gameObject.CompareTag("TriggerEvent")) CoffeeManager.Instance.RefillCoffee();
         }
     }
 }
