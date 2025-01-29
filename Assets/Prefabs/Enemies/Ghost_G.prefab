@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5255301565227821292}
   - component: {fileID: 5020499136763016069}
   - component: {fileID: 312656627659734497}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ghost_G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -142,7 +142,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3515659305242033685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,3 +251,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36590df0c6a4a469578e1380906f1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SendPlayerBackToOffice: {fileID: 0}

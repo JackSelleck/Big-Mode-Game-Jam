@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Enemy_AI
@@ -12,6 +13,7 @@ namespace Enemy_AI
         {
             //TODO implement drain energy. Somehow.
             
+            CoffeeManager.Instance.DepleteCoffee();
             GhostTouch(this);
         }
     }
