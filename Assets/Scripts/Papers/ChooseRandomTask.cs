@@ -23,6 +23,7 @@ public class ChooseRandomTask : MonoBehaviour
             Debug.Log("Task Started");
             taskDecider = Random.Range(0, 3);
             ChooseTask();
+            collision.gameObject.SetActive(false);  
             
         }
     }
