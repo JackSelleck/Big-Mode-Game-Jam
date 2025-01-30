@@ -15,7 +15,6 @@ namespace Player
         private Rigidbody2D rb;
         private SpriteRenderer sr;
         
-
         public UnityAction OnPlayerDeath;
         public UnityAction OnPlayerRespawn;
         
@@ -29,10 +28,7 @@ namespace Player
         }
 
         private void OnEnable() => OnPlayerDeath += PlayerDeath;
-        
         private void OnDisable() => OnPlayerDeath -= PlayerDeath;
-        
-
         private void PlayerDeath()
         {
             //TODO lose all progress. Somehow.
@@ -54,8 +50,6 @@ namespace Player
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentSceneIndex);
         }
-
-
         public void PlayerRespawn()
         {
             transform.position = RespawnPoint.position;
