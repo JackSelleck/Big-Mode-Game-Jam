@@ -13,11 +13,7 @@ namespace Enemy_AI
         }
         private void GreenGhostAttack()
         {
-            //TODO implement sending the player back to their desk. Somehow.
-            
             BasePlayer.Instance.PlayerRespawn();
-            
-            // SendPlayerBackToOffice.position = Player.transform.position;
             
             GhostTouch(this);
         }

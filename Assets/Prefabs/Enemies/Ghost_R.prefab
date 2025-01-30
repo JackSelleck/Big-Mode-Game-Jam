@@ -173,7 +173,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  PlayerRef: {fileID: 0}
+  PlayerRef: {fileID: 3429702692842296134, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
   Patrol: {fileID: 1279902789483874651}
 --- !u!114 &1279902789483874651
 MonoBehaviour:
