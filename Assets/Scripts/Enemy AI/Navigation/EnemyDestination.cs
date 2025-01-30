@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,16 +13,6 @@ namespace Enemy_AI
         [SerializeField] private EnemyPatrolling Patrol;
         
         private bool lineOfSight = false;
-
-        private NavMeshAgent agent;
-        private void Start()
-        {
-            agent = GetComponent<NavMeshAgent>();
-            agent.updateRotation = false;
-            agent.updateUpAxis = false;
-
-            gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-        }
         private void Update()
         {
             if (!agent.isOnNavMesh) return;
