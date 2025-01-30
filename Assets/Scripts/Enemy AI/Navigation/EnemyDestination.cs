@@ -19,6 +19,8 @@ namespace Enemy_AI
             agent = GetComponent<NavMeshAgent>();
             agent.updateRotation = false;
             agent.updateUpAxis = false;
+
+            gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
         }
         private void Update()
         {
