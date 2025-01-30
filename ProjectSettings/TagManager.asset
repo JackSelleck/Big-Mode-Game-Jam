@@ -12,6 +12,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
+  - TaskLayer
   - Player
   - Water
   - UI

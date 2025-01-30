@@ -7,12 +7,9 @@ public class PickUpPaper : MonoBehaviour
     private bool followPlayer;
     private SpriteRenderer spriteRenderer;
 
-
-
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
