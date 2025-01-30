@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     private Animator animator;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
 
     // Tracks direction
     public bool FacingDown = false;
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         //animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         playerControls = new InputSystem_Actions();
     }
@@ -54,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
            // animator.SetBool("isMoving", false);
         }
 
+        FlipSpriteOnDestination();
         //LookDirection();
     }
 
@@ -104,6 +107,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else { FacingRight = false; }
 
+    }
+    private void FlipSpriteOnDestination()
+    {
+        float velocity = PlayerInputHandler.MoveInput.x;
+            
+        if (Mathf.Abs(velocity) > 0.01f) 
+        {
+            sr.flipX = velocity < 0;
+        }
     }
 
 }

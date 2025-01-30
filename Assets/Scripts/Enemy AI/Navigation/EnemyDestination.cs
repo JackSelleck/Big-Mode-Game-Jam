@@ -17,6 +17,9 @@ namespace Enemy_AI
         {
             if (!agent.isOnNavMesh) return;
 
+            //TODO Flip the sprite when the player is behind the enemy.
+            // sr.flipX = PlayerRef.transform.position.x < transform.position.x;
+
             switch (lineOfSight)
             {
                 case true:
@@ -26,6 +29,8 @@ namespace Enemy_AI
                     Patrol.FollowWayPoints(agent);
                     break;
             }
+            
+            FlipSpriteOnDestination();
         }
 
         private void FixedUpdate()
@@ -35,8 +40,22 @@ namespace Enemy_AI
             if (hit.collider == null) return;
             
             lineOfSight = hit.collider.gameObject == PlayerRef;
+
+            if (lineOfSight) sr.flipX = PlayerRef.transform.position.x < transform.position.x;
             
             Debug.DrawRay(transform.position, PlayerRef.transform.position - transform.position, lineOfSight ? Color.red: Color.clear);
+        }
+        
+        private void FlipSpriteOnDestination()
+        {
+            if (lineOfSight) return; 
+
+            Vector2 velocity = agent.velocity; 
+            
+            if (Mathf.Abs(velocity.x) > 0.01f) 
+            {
+                sr.flipX = velocity.x < 0;
+            }
         }
     }
 }
