@@ -47,9 +47,9 @@ namespace System
             OnCoffeeRefill?.Invoke();
         }
 
-        public void DepleteCoffee()
+        public void CoffeDrain(float energyDrain)
         {
-            currentCoffeeValue = coffeeSlider.minValue + 0.01f;
+            currentCoffeeValue = currentCoffeeValue * energyDrain;
             coffeeSlider.value = currentCoffeeValue;
             
             OnCoffeeDeplete?.Invoke();
