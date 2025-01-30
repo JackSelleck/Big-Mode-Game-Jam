@@ -8652,11 +8652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4184565732773891416, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.77
+      value: 6.39
       objectReference: {fileID: 0}
     - target: {fileID: 4184565732773891416, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -2.45
       objectReference: {fileID: 0}
     - target: {fileID: 4184565732773891416, guid: 5857e7c1186a8a3419fd48283e388820, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9304,6 +9304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost_B
       objectReference: {fileID: 0}
+    - target: {fileID: 416120785516857981, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 467579644615728854, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
@@ -9320,10 +9324,22 @@ PrefabInstance:
       propertyPath: 'waypoints.Array.data[3]'
       value: 
       objectReference: {fileID: 1426920417}
+    - target: {fileID: 3427397470742425747, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
+      propertyPath: EnergyDrain
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4146954434373227732, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
       propertyPath: PlayerRef
       value: 
       objectReference: {fileID: 1640682872}
+    - target: {fileID: 5165807976074246165, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165807976074246165, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7388791217256713266, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2945302
