@@ -13,9 +13,10 @@ TagManager:
   - TransparentFX
   - Ignore Raycast
   - TaskLayer
+  - Player
   - Water
   - UI
-  - 
+  - PassThrough
   - 
   - 
   - 

@@ -16,7 +16,6 @@ namespace System
         public UnityAction OnCoffeeDeplete;
 
         private float currentCoffeeValue;
-        
         public static CoffeeManager Instance { get; private set; }
         private void Start()
         {
@@ -34,8 +33,6 @@ namespace System
             currentCoffeeValue -= Time.deltaTime * depletionRate;
             coffeeSlider.value = currentCoffeeValue;
 
-            
-            
             if (!(coffeeSlider.value <= 0)) return;
             
             Debug.Log("Game Over");
@@ -50,9 +47,9 @@ namespace System
             OnCoffeeRefill?.Invoke();
         }
 
-        public void DepleteCoffee()
+        public void CoffeDrain(float energyDrain)
         {
-            currentCoffeeValue = coffeeSlider.minValue;
+            currentCoffeeValue = currentCoffeeValue * energyDrain;
             coffeeSlider.value = currentCoffeeValue;
             
             OnCoffeeDeplete?.Invoke();
