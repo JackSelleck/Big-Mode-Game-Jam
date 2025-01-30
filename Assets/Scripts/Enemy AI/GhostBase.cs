@@ -11,10 +11,12 @@ namespace Enemy_AI
         // public GameObject PlayerRef;
         
         protected NavMeshAgent agent;
-        
         protected UnityEvent OnGhostTouch;
+        protected SpriteRenderer sr;
         private void Start()
         {
+            sr = GetComponent<SpriteRenderer>();
+            
             agent = GetComponent<NavMeshAgent>();
             agent.updateRotation = false;
             agent.updateUpAxis = false;
