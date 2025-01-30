@@ -59,16 +59,16 @@ public class ChooseRandomTask : MonoBehaviour
         switch (taskDecider)
         {
             case 0:
-                //SceneManager.LoadScene(("Typing Game"), LoadSceneMode.Additive);
-                writingTask.SetActive(true);
-                officeMap.SetActive(false);
+                SceneManager.LoadScene("Typing Game");
+                //writingTask.SetActive(true);
+                //officeMap.SetActive(false);
                 break;
             case 1:
-                //SceneManager.LoadScene(("Drawing Game"), LoadSceneMode.Additive);
+                SceneManager.LoadScene("Drawing Game");
 
                 break;
             case 2:
-                //SceneManager.LoadScene(("Maze Game"), LoadSceneMode.Additive);
+                SceneManager.LoadScene("Maze Game");
                 break;
         }
 
