@@ -34,8 +34,6 @@ namespace System
             currentCoffeeValue -= Time.deltaTime * depletionRate;
             coffeeSlider.value = currentCoffeeValue;
 
-            
-            
             if (!(coffeeSlider.value <= 0)) return;
             
             Debug.Log("Game Over");
