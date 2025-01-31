@@ -8,7 +8,7 @@ namespace Player
 {
     public class BasePlayer : MonoBehaviour
     {
-        public static BasePlayer Instance { get; private set; }
+        // public static BasePlayer Instance { get; private set; }
         
         public bool PlayerIsDead { get; private set; }
 
@@ -22,8 +22,8 @@ namespace Player
         
         private void Start()
         {
-            if (Instance == null) Instance = this;
-            else Destroy(gameObject);
+            // if (Instance == null) Instance = this;
+            // else Destroy(gameObject);
 
             rb = GetComponent<Rigidbody2D>();
             sr = GetComponent<SpriteRenderer>();
