@@ -1,5 +1,6 @@
 using Player;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace System
@@ -7,29 +8,76 @@ namespace System
     public class GameManager : MonoBehaviour
     {
         public GameObject GameOverUI;
+        
+        [SerializeField] private GameObject ResumeButton;
+        [SerializeField] private GameObject RestartButton;
+        
         [SerializeField] private BasePlayer PlayerRef;
         
-        private void Start()
+        private InputSystem_Actions playerControls;
+        private InputAction esc;
+
+        private bool gameOver;
+        
+        private void Awake()
+        {
+            playerControls = new InputSystem_Actions();
+        }
+        private void OnEnable()
         {
             PlayerRef.OnPlayerDeath += GameOver;
+            esc = playerControls.Player.ESCAPE;
+            esc.Enable();
         }
-
+        private void OnDisable()
+        {
+            PlayerRef.OnPlayerDeath -= GameOver;
+            esc.Disable();
+        }
+        private void Update()
+        {
+            if (gameOver) return;
+            
+            // PlayerInputHandler.MoveInput = esc.ReadValue<Vector2>();
+            //
+            // if (PlayerInputHandler.MoveInput != Vector2.zero)
+            // {
+            //     PauseButton();;
+            // }
+            if (Input.GetKeyDown(KeyCode.Escape)) PauseButton();
+        }
+        public void MainMenu()
+        {
+            SceneManager.LoadScene(0);
+        }
         public void RestartGame()
         {
             Time.timeScale = 1;
             GameOverUI.SetActive(false);
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameOver = false;
         }
-        public void MainMenu()
+        public void ResumeGame()
         {
-            SceneManager.LoadScene(0);
+            Time.timeScale = 1;
+            GameOverUI.SetActive(false);
+        }
+        private void PauseButton()
+        {
+            ResumeButton.SetActive(true);
+            RestartButton.SetActive(false);
+            Time.timeScale = 0;
+            GameOverUI.SetActive(true);
         }
         private void GameOver()
         {
+            RestartButton.SetActive(true);
+            ResumeButton.SetActive(false);
             Time.timeScale = 0;
-            
             GameOverUI.SetActive(true);
+
+            gameOver = true;
         }
     }
 }
