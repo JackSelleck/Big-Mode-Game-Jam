@@ -12,6 +12,9 @@ namespace System
         [SerializeField] private Slider coffeeSlider;
         [SerializeField] private float depletionRate = 0.6f;
 
+        [SerializeField] private BasePlayer PlayerRef;
+        
+
         public UnityAction OnCoffeeRefill;
         public UnityAction OnCoffeeDeplete;
 
@@ -28,7 +31,7 @@ namespace System
 
         private void Update()
         {
-            if (!(currentCoffeeValue > 0f)) return;
+            if (!(currentCoffeeValue >= 0f)) return;
             
             currentCoffeeValue -= Time.deltaTime * depletionRate;
             coffeeSlider.value = currentCoffeeValue;
@@ -36,7 +39,7 @@ namespace System
             if (!(coffeeSlider.value <= 0)) return;
             
             Debug.Log("Game Over");
-            BasePlayer.Instance.OnPlayerDeath?.Invoke();
+            PlayerRef.OnPlayerDeath?.Invoke();
         }
         
         public void RefillCoffee()
