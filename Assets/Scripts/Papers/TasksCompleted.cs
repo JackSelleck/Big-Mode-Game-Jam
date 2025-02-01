@@ -12,8 +12,8 @@ public class TasksCompleted : MonoBehaviour
         if (tasksCompleted == availableTasks)
         {
             SceneManager.LoadScene(NextSceneName);
+            Debug.Log("To next scene");
+            SceneManager.LoadScene("Level2");
         }
-
     }
-
 }
