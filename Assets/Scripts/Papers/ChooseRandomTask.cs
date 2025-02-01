@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ChooseRandomTask : MonoBehaviour
 {
-    public TasksCompleted tasksCompleted;
-
     public List<int> taskOptions = new List<int> {};
 
     public GameObject officeMap;
@@ -42,10 +40,9 @@ public class ChooseRandomTask : MonoBehaviour
     {
         if (collision.CompareTag("Papers") && Input.GetKey(KeyCode.E))
         {
-            Debug.Log("Task Started");
-            ChooseTask();
             collision.gameObject.SetActive(false);
-            tasksCompleted.tasksCompleted++;
+            Debug.Log("Task Started");
+            ChooseTask();        
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -127,23 +124,23 @@ public class ChooseRandomTask : MonoBehaviour
                 officeMap.SetActive(false);
                 break;
             case 11:
-                writingTask.SetActive(true);
+                BallTask1.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 12:
-                writingTask.SetActive(true);
+                BallTask2.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 13:
-                writingTask.SetActive(true);
+                BallTask3.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 14:
-                writingTask.SetActive(true);
+                BallTask4.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 15:
-                writingTask.SetActive(true);
+                BallTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
 

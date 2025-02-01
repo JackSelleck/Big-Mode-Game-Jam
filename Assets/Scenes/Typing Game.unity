@@ -1037,8 +1037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027c9bb6f594d0643be91923b36d081e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   text: {fileID: 2082832222}
   playersText: {fileID: 348408606}
+  typingGame: {fileID: 0}
+  Office: {fileID: 0}
 --- !u!4 &1193369077
 Transform:
   m_ObjectHideFlags: 0
@@ -1405,9 +1408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'bigmode
-
-'
+  m_text: bowsers big bean burrito
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1c823ffbc1d0d84d825c8967baa5c0b, type: 2}
   m_sharedMaterial: {fileID: -5194423736463530161, guid: c1c823ffbc1d0d84d825c8967baa5c0b, type: 2}
@@ -1472,7 +1473,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -183.41809, w: 0}
+  m_margin: {x: 0, y: 0, z: -259.04257, w: -91.57239}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
