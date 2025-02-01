@@ -8,11 +8,17 @@ public class TypingGame : MonoBehaviour
     private int decideText;
     public TextMeshProUGUI text;
     public TMP_InputField playersText;
-    public void Start()
+    public GameObject typingGame;
+    public GameObject Office;
+    public void OnEnable()
     {
         decideText = Random.Range(0, 20);
         DecideText();
         playersText.Select();
+    }
+    private void OnDisable()
+    {
+        playersText.text = null;
     }
     private void DecideText()
     {
@@ -42,8 +48,9 @@ public class TypingGame : MonoBehaviour
     {
         if (playersText.text == text.text)
         {
-            gameObject.SetActive(false);
-            SceneManager.LoadScene("Office");
+            typingGame.SetActive(false);
+            Office.SetActive(true);
+            //SceneManager.LoadScene("Office");
             Debug.Log("Writing Task Complete");
         }
     }

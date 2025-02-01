@@ -6,6 +6,7 @@ public class MoveInMaze : MonoBehaviour
     // New Input System
     public InputSystem_Actions playerControls;
     private InputAction Move;
+    public Transform spawnPos;
 
     // Normal movement code stuff
     public float moveSpeed;
@@ -21,6 +22,7 @@ public class MoveInMaze : MonoBehaviour
     {
         Move = playerControls.Player.Move;
         Move.Enable();
+        transform.position = spawnPos.position;
     }
     private void OnDisable()
     {

@@ -18,8 +18,8 @@ public class DrawingGameCompleted : MonoBehaviour
     IEnumerator wait()
     {
         yield return new WaitForSeconds(1f);
-        //taskParent.SetActive(true);
-        //officeParent.SetActive(false);
-        SceneManager.LoadScene("Office");
+        taskParent.SetActive(false);
+        officeParent.SetActive(true);
+        //SceneManager.LoadScene("Office");
     }
 }
