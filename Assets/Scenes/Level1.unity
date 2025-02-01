@@ -1866,6 +1866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeEnergyBar
       objectReference: {fileID: 0}
+    - target: {fileID: 6973580720118138089, guid: ac907816ee29a464cb26c7cc5d5806c3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7842328420381143165, guid: ac907816ee29a464cb26c7cc5d5806c3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8809,11 +8813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8911483696893058821, guid: d8dfe36d2a6d7b1439d5b8ebac1673a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19282673
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 8911483696893058821, guid: d8dfe36d2a6d7b1439d5b8ebac1673a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.818026
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 8911483696893058821, guid: d8dfe36d2a6d7b1439d5b8ebac1673a4, type: 3}
       propertyPath: m_LocalPosition.z

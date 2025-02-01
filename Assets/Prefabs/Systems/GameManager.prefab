@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5314766171002819680}
   - component: {fileID: 6206808070648255681}
+  - component: {fileID: -4877242143977059979}
+  - component: {fileID: 7049517502598734457}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,4 +47,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverUI: {fileID: 0}
+  ResumeButton: {fileID: 0}
+  RestartButton: {fileID: 0}
   PlayerRef: {fileID: 0}
+--- !u!114 &-4877242143977059979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396250725271282839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e00f24770b9bc4bb0f2f7303fcaa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  papersHeld: 0
+--- !u!114 &7049517502598734457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396250725271282839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f72b192ba20256459ae07f7f1739d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableTasks: 5
+  tasksCompleted: 0
