@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TasksCompleted : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class TasksCompleted : MonoBehaviour
     {
         if (tasksCompleted == availableTasks)
         {
-            // Load Next Game
+            SceneManager.LoadScene("Level2");
         }
 
     }
