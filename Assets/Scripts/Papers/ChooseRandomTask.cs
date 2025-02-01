@@ -55,7 +55,11 @@ public class ChooseRandomTask : MonoBehaviour
 
     private void ChooseTask()
     {
-        if (taskOptions.Count == 0)
+
+        MazeTask2.SetActive(true);
+        officeMap.SetActive(false);
+
+        /*if (taskOptions.Count == 0)
         {
             taskOptions.Add(15);
         }
@@ -146,6 +150,7 @@ public class ChooseRandomTask : MonoBehaviour
 
         }
 
+    }*/
     }
 
 }
