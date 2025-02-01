@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DrawingGameCompleted : MonoBehaviour
 {
+    public LimitPapersHeld LimitPapersHeld;
     public TasksCompleted tasksCompleted;
     public GameObject taskParent;
     public GameObject officeParent;
@@ -22,6 +23,7 @@ public class DrawingGameCompleted : MonoBehaviour
         taskParent.SetActive(false);
         officeParent.SetActive(true);
         tasksCompleted.tasksCompleted++;
+        LimitPapersHeld.papersHeld--;
         //SceneManager.LoadScene("Office");
     }
 }

@@ -6,6 +6,7 @@ public class PickUpPaper : MonoBehaviour
     public Transform player;
     private bool followPlayer;
     private SpriteRenderer spriteRenderer;
+    private bool waitToStopBug;
 
     void Start()
     {
@@ -32,7 +33,6 @@ public class PickUpPaper : MonoBehaviour
     {
         if (collision.CompareTag("Computer") && Input.GetKey(KeyCode.E))
         {
-            LimitPapersHeld.papersHeld--;
             Debug.Log("Paper Destroyed");
             gameObject.SetActive(false);
         }

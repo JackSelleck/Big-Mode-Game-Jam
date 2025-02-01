@@ -3581,6 +3581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
   tasksCompleted: {fileID: 0}
   taskParent: {fileID: 616757730}
   officeParent: {fileID: 231125540}
@@ -4004,7 +4005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tasksCompleted: {fileID: 0}
+  LimitPapersHeld: {fileID: 1205129266}
+  tasksCompleted: {fileID: 1205129265}
   taskParent: {fileID: 1544468832}
   officeParent: {fileID: 231125540}
 --- !u!212 &354217965
@@ -4826,6 +4828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
   tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1095926217}
   officeParent: {fileID: 231125540}
@@ -16840,6 +16843,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
+--- !u!114 &1205129265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7049517502598734457, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
+  m_PrefabInstance: {fileID: 1205129261}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f72b192ba20256459ae07f7f1739d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1205129266 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4877242143977059979, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
@@ -21973,6 +21987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
   tasksCompleted: {fileID: 0}
   taskParent: {fileID: 215240206}
   officeParent: {fileID: 231125540}
@@ -23094,6 +23109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
   tasksCompleted: {fileID: 0}
   taskParent: {fileID: 972218480}
   officeParent: {fileID: 231125540}
@@ -28708,6 +28724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
   tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1264018308}
   officeParent: {fileID: 231125540}
