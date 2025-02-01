@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      trashbox_01_0: 6620734416306096249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
