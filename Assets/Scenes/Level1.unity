@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b525af35927cd458eff8ac3c83c076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LimitPapersHeld: {fileID: 1205129264}
+  LimitPapersHeld: {fileID: 1205129266}
   player: {fileID: 100133102}
 --- !u!4 &127316943
 Transform:
@@ -3581,6 +3581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 616757730}
   officeParent: {fileID: 231125540}
 --- !u!212 &329359808
@@ -4003,6 +4005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 1205129266}
+  tasksCompleted: {fileID: 1205129265}
   taskParent: {fileID: 1544468832}
   officeParent: {fileID: 231125540}
 --- !u!212 &354217965
@@ -4824,6 +4828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1095926217}
   officeParent: {fileID: 231125540}
 --- !u!212 &469306498
@@ -7873,7 +7879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b525af35927cd458eff8ac3c83c076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LimitPapersHeld: {fileID: 1205129264}
+  LimitPapersHeld: {fileID: 1205129266}
   player: {fileID: 100133102}
 --- !u!4 &754189968
 Transform:
@@ -8778,7 +8784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b525af35927cd458eff8ac3c83c076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LimitPapersHeld: {fileID: 1205129264}
+  LimitPapersHeld: {fileID: 1205129266}
   player: {fileID: 100133102}
 --- !u!4 &820618857
 Transform:
@@ -10172,6 +10178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027c9bb6f594d0643be91923b36d081e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   text: {fileID: 1212630677}
   playersText: {fileID: 171902392}
   typingGame: {fileID: 203574528}
@@ -16827,49 +16834,37 @@ PrefabInstance:
       propertyPath: RestartButton
       value: 
       objectReference: {fileID: 493177397}
+    - target: {fileID: 7049517502598734457, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
+      propertyPath: NextSceneName
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3396250725271282839, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1205129263}
-    - targetCorrespondingSourceObject: {fileID: 3396250725271282839, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1205129264}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
---- !u!1 &1205129262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3396250725271282839, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
+--- !u!114 &1205129265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7049517502598734457, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
   m_PrefabInstance: {fileID: 1205129261}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1205129263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205129262}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f72b192ba20256459ae07f7f1739d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableTasks: 4
-  tasksCompleted: 0
---- !u!114 &1205129264
+--- !u!114 &1205129266 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: -4877242143977059979, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
+  m_PrefabInstance: {fileID: 1205129261}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205129262}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09e00f24770b9bc4bb0f2f7303fcaa80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  papersHeld: 0
 --- !u!1 &1212630675
 GameObject:
   m_ObjectHideFlags: 0
@@ -21992,6 +21987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 215240206}
   officeParent: {fileID: 231125540}
 --- !u!212 &1456405119
@@ -23112,6 +23109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 972218480}
   officeParent: {fileID: 231125540}
 --- !u!1 &1562207804
@@ -27613,7 +27612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03dcfa4045b2c674f94a87bed3e956b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tasksCompleted: {fileID: 1205129263}
   taskOptions: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
   officeMap: {fileID: 231125540}
   writingTask: {fileID: 203574528}
@@ -28726,6 +28724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LimitPapersHeld: {fileID: 0}
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1264018308}
   officeParent: {fileID: 231125540}
 --- !u!212 &2048857174
@@ -29187,7 +29187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b525af35927cd458eff8ac3c83c076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LimitPapersHeld: {fileID: 1205129264}
+  LimitPapersHeld: {fileID: 1205129266}
   player: {fileID: 100133102}
 --- !u!4 &2089894074
 Transform:

@@ -5940,6 +5940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 382071652}
   officeParent: {fileID: 1834388234}
 --- !u!212 &287069691
@@ -7616,6 +7617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableTasks: 5
   tasksCompleted: 0
+  NextSceneName: 
 --- !u!1 &488921970
 GameObject:
   m_ObjectHideFlags: 0
@@ -15629,6 +15631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1856015296}
   officeParent: {fileID: 1834388234}
 --- !u!212 &1011356306
@@ -15812,6 +15815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1195667254}
   officeParent: {fileID: 1834388234}
 --- !u!212 &1020371490
@@ -16556,8 +16560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03dcfa4045b2c674f94a87bed3e956b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tasksCompleted: {fileID: 473613209}
   taskOptions: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
+  player: {fileID: 2054011834}
   officeMap: {fileID: 1834388234}
   writingTask: {fileID: 1014069172}
   MazeTask1: {fileID: 1078902915}
@@ -19715,6 +19719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1078902915}
   officeParent: {fileID: 1834388234}
 --- !u!212 &1453429421
@@ -22226,6 +22231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 0}
   officeParent: {fileID: 0}
 --- !u!1 &1879723719
@@ -26195,6 +26201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027c9bb6f594d0643be91923b36d081e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   text: {fileID: 440109679}
   playersText: {fileID: 167077764}
   typingGame: {fileID: 1014069172}
@@ -27564,6 +27571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 1990924963}
   officeParent: {fileID: 1834388234}
 --- !u!212 &2095834323
