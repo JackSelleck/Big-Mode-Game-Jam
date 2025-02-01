@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DrawingGameCompleted : MonoBehaviour
 {
+    public TasksCompleted tasksCompleted;
     public GameObject taskParent;
     public GameObject officeParent;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,6 +21,7 @@ public class DrawingGameCompleted : MonoBehaviour
         yield return new WaitForSeconds(1f);
         taskParent.SetActive(false);
         officeParent.SetActive(true);
+        tasksCompleted.tasksCompleted++;
         //SceneManager.LoadScene("Office");
     }
 }

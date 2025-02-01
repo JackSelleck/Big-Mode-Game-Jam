@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TypingGame : MonoBehaviour
 {
+    public TasksCompleted tasksCompleted;
     private int decideText;
     public TextMeshProUGUI text;
     public TMP_InputField playersText;
@@ -50,6 +51,7 @@ public class TypingGame : MonoBehaviour
         {
             typingGame.SetActive(false);
             Office.SetActive(true);
+            tasksCompleted.tasksCompleted++;
             //SceneManager.LoadScene("Office");
             Debug.Log("Writing Task Complete");
         }
