@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Drawing Game.unity
     guid: 62639ffa822a5c749b9418e445d3f7ad
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: e869f9169d47bee459ab4704c497b021
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7832bbdbfe3bee2449903dc5a81fd073, type: 3}
   m_UseUCBPForAssetBundles: 0
