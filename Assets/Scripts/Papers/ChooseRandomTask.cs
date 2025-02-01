@@ -7,8 +7,6 @@ public class ChooseRandomTask : MonoBehaviour
 {
     public List<int> taskOptions = new List<int> {};
 
-    public GameObject player;
-
     public GameObject officeMap;
 
     public GameObject writingTask;
@@ -33,40 +31,25 @@ public class ChooseRandomTask : MonoBehaviour
     {    
         if (collision.CompareTag("Papers"))
         {
-            //text.enabled = true;
+            text.enabled = true;
             text.text = ("E to Start Task");
             Debug.Log("Desk Collision");
         }
-    }
-    private void Update()
-    {
-        if (Vector2.Distance(transform.position, player.transform.position) < 5 && Input.GetKey(KeyCode.E))
-        {         
-            Debug.Log("Task Started");
-            ChooseTask();
-            text.enabled = true;
-            text.text = ("E to Start Task");
-        }
-        else
-        {
-            text.enabled = false;
-        }
-
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Papers") && Input.GetKey(KeyCode.E))
         {
-            //collision.gameObject.SetActive(false);
-            //Debug.Log("Task Started");
-            //ChooseTask();        
+            collision.gameObject.SetActive(false);
+            Debug.Log("Task Started");
+            ChooseTask();        
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Papers"))
         {
-         //   text.enabled = false;
+            text.enabled = false;
         }
     }
 

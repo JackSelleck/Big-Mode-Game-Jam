@@ -33,7 +33,7 @@ public class TypingGame : MonoBehaviour
         if (decideText == 7) { text.text = "ooh ooh ah ah"; }
         if (decideText == 8) { text.text = "and i better get it too"; }
         if (decideText == 9) { text.text = "donkey kong december"; }
-        if (decideText == 10){ text.text = "this game really makes you FEEL overworked"; }
+        if (decideText == 10){ text.text = "feel like batman"; }
         if (decideText == 11){ text.text = "huge drama"; }
         if (decideText == 12){ text.text = "goblins are real"; }
         if (decideText == 13){ text.text = "i want tacos"; }
