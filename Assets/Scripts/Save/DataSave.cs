@@ -59,4 +59,5 @@ public class DataSave
     {
         return PlayerPrefs.HasKey(fileName + FileType);
     }
+
 }
