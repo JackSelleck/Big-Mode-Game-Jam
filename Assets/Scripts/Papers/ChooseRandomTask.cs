@@ -7,6 +7,8 @@ public class ChooseRandomTask : MonoBehaviour
 {
     public List<int> taskOptions = new List<int> {};
 
+    public GameObject player;
+
     public GameObject officeMap;
 
     public GameObject writingTask;
@@ -31,25 +33,40 @@ public class ChooseRandomTask : MonoBehaviour
     {    
         if (collision.CompareTag("Papers"))
         {
-            text.enabled = true;
+            //text.enabled = true;
             text.text = ("E to Start Task");
             Debug.Log("Desk Collision");
         }
+    }
+    private void Update()
+    {
+        if (Vector2.Distance(transform.position, player.transform.position) < 5 && Input.GetKey(KeyCode.E))
+        {         
+            Debug.Log("Task Started");
+            ChooseTask();
+            text.enabled = true;
+            text.text = ("E to Start Task");
+        }
+        else
+        {
+            text.enabled = false;
+        }
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Papers") && Input.GetKey(KeyCode.E))
         {
-            collision.gameObject.SetActive(false);
-            Debug.Log("Task Started");
-            ChooseTask();        
+            //collision.gameObject.SetActive(false);
+            //Debug.Log("Task Started");
+            //ChooseTask();        
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Papers"))
         {
-            text.enabled = false;
+         //   text.enabled = false;
         }
     }
 
@@ -78,29 +95,29 @@ public class ChooseRandomTask : MonoBehaviour
         {
             case 0:
                 //SceneManager.LoadScene("Typing Game");
-                writingTask.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 1:
                 //SceneManager.LoadScene("Drawing Game");
-                writingTask.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 2:
-                writingTask.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 //SceneManager.LoadScene("Maze Game");
                 break;
             case 3:
-                writingTask.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 4:
-                writingTask.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 5:
-                writingTask.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 6:
@@ -124,28 +141,25 @@ public class ChooseRandomTask : MonoBehaviour
                 officeMap.SetActive(false);
                 break;
             case 11:
-                BallTask1.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 12:
-                BallTask2.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 13:
-                BallTask3.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 14:
-                BallTask4.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
             case 15:
-                BallTask5.SetActive(true);
+                MazeTask5.SetActive(true);
                 officeMap.SetActive(false);
                 break;
-
-
-
 
         }
 
