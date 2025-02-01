@@ -34,6 +34,7 @@ public class trailCollider : MonoBehaviour
         else
         {
             validCollider = new GameObject("TrailCollider", typeof(EdgeCollider2D)).GetComponent<EdgeCollider2D>();
+            validCollider.gameObject.layer = 3;
         }
         return validCollider;
     }
