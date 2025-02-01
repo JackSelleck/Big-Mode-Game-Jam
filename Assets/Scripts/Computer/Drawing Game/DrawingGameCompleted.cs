@@ -20,10 +20,11 @@ public class DrawingGameCompleted : MonoBehaviour
     IEnumerator wait()
     {
         yield return new WaitForSeconds(1f);
-        taskParent.SetActive(false);
-        officeParent.SetActive(true);
         tasksCompleted.tasksCompleted++;
         LimitPapersHeld.papersHeld--;
+        taskParent.SetActive(false);
+        officeParent.SetActive(true);
+
         //SceneManager.LoadScene("Office");
     }
 }
