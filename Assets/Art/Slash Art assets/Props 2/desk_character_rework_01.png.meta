@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      desk_character_rework_01_0: 3519897911378457907
+      desk_character_rework_01_1: -3219489583889745883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
