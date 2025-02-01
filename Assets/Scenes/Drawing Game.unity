@@ -686,6 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e75453c76bd1f04ab3492dfbe80d9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tasksCompleted: {fileID: 0}
   taskParent: {fileID: 0}
   officeParent: {fileID: 0}
 --- !u!4 &795988589
@@ -1517,7 +1518,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
