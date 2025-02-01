@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class LimitPapersHeld : MonoBehaviour
 {
-    public int papersHeld = 0;
+    [Range(0,1)] public int papersHeld = 0;
 }

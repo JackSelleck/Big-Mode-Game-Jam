@@ -6565,6 +6565,14 @@ PrefabInstance:
       propertyPath: PlayerRef
       value: 
       objectReference: {fileID: 1640682873}
+    - target: {fileID: 7190512769958801383, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
+      propertyPath: CoffeeBarUI
+      value: 
+      objectReference: {fileID: 2106511441}
+    - target: {fileID: 7190512769958801383, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
+      propertyPath: depletionRate
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 8570072527846083613, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
       propertyPath: m_Name
       value: CoffeeEnergyBar
@@ -9416,6 +9424,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
+--- !u!1 &2106511441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8570072527846083613, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
+  m_PrefabInstance: {fileID: 833339129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2118524977
 GameObject:
   m_ObjectHideFlags: 0

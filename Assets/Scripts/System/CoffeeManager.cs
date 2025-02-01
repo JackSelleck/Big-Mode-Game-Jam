@@ -13,12 +13,16 @@ namespace System
         [SerializeField] private float depletionRate = 0.6f;
 
         [SerializeField] private BasePlayer PlayerRef;
-        
 
+        [SerializeField] private GameObject CoffeeBarUI;
+        
+        
         public UnityAction OnCoffeeRefill;
         public UnityAction OnCoffeeDeplete;
+        public static UnityAction<bool> OnCoffeDrain;
 
-        private float currentCoffeeValue;
+        public float currentCoffeeValue;
+        private bool coffeeDrain = true;
         public static CoffeeManager Instance { get; private set; }
         private void Start()
         {
@@ -29,12 +33,20 @@ namespace System
             currentCoffeeValue = coffeeSlider.value;
         }
 
+        private void OnEnable()
+        {
+            OnCoffeDrain += CoffeeDraining;
+        }
+
         private void Update()
         {
+            if (!coffeeDrain) return;
             if (!(currentCoffeeValue >= 0f)) return;
             
             currentCoffeeValue -= Time.deltaTime * depletionRate;
             coffeeSlider.value = currentCoffeeValue;
+
+            Debug.Log("Coffee Value: " + currentCoffeeValue);
 
             if (!(coffeeSlider.value <= 0)) return;
             
@@ -56,6 +68,13 @@ namespace System
             coffeeSlider.value = currentCoffeeValue;
             
             OnCoffeeDeplete?.Invoke();
+        }
+
+        private void CoffeeDraining(bool coffeeDraining)
+        {
+            ChooseRandomTask.isInsideGame = !coffeeDraining;
+            coffeeDrain = coffeeDraining;
+            CoffeeBarUI.SetActive(coffeeDraining);
         }
     }
 }
