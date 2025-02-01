@@ -72,7 +72,7 @@ namespace System
 
         private void CoffeeDraining(bool coffeeDraining)
         {
-            ChooseRandomTask.isInsideGame = !coffeeDraining;
+            // ChooseRandomTask.isInsideGame = !coffeeDraining;
             coffeeDrain = coffeeDraining;
             CoffeeBarUI.SetActive(coffeeDraining);
         }
