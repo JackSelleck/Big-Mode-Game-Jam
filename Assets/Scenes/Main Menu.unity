@@ -349,6 +349,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 967471783}
     m_Modifications:
+    - target: {fileID: 854785622480546283, guid: 737b4b49777ab824eaaab35908e0fe36, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -37.200005
+      objectReference: {fileID: 0}
     - target: {fileID: 2362794347005639681, guid: 737b4b49777ab824eaaab35908e0fe36, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -432,6 +436,18 @@ PrefabInstance:
     - target: {fileID: 2520517427134936107, guid: 737b4b49777ab824eaaab35908e0fe36, type: 3}
       propertyPath: m_Name
       value: MainMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421464409034396237, guid: 737b4b49777ab824eaaab35908e0fe36, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -37.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8004491957018432982, guid: 737b4b49777ab824eaaab35908e0fe36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090805241305487445, guid: 737b4b49777ab824eaaab35908e0fe36, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -37.200005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
