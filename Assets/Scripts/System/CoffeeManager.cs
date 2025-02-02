@@ -9,6 +9,7 @@ namespace System
 {
     public class CoffeeManager : MonoBehaviour
     {
+        public AudioSource audioDrink;
         [SerializeField] private Slider coffeeSlider;
         [SerializeField] private float depletionRate = 0.2f;
 
@@ -45,6 +46,11 @@ namespace System
         
         public void RefillCoffee()
         {
+            if (audioDrink != null && audioDrink.clip != null)
+            {
+                audioDrink.PlayOneShot(audioDrink.clip);
+            }
+
             currentCoffeeValue = coffeeSlider.maxValue;
             coffeeSlider.value = currentCoffeeValue;
             

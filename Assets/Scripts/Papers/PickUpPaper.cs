@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PickUpPaper : MonoBehaviour
 {
+    public AudioSource audioPaper;
     public LimitPapersHeld LimitPapersHeld;
     public Transform player;
     private bool followPlayer;
@@ -25,6 +26,11 @@ public class PickUpPaper : MonoBehaviour
     {
         if (collision.CompareTag("Player") && LimitPapersHeld.papersHeld == 0)
         {
+            if (audioPaper != null && audioPaper.clip != null)
+            {
+                audioPaper.PlayOneShot(audioPaper.clip);
+            }
+
             followPlayer = true;
             LimitPapersHeld.papersHeld++;
         }
