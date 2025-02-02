@@ -28,6 +28,10 @@ public class ChooseRandomTask : MonoBehaviour
     // public int taskDecider;
     public TextMeshProUGUI text;
 
+    private void Start()
+    {
+        text.enabled = false;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {    
         if (collision.CompareTag("Papers"))
