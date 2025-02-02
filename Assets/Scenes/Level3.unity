@@ -11936,7 +11936,7 @@ PrefabInstance:
       objectReference: {fileID: 560737955}
     - target: {fileID: 3427397470742425747, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
       propertyPath: EnergyDrain
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4146954434373227732, guid: c4116224ed137a54c873d45ff4a4d101, type: 3}
       propertyPath: speed
@@ -28598,7 +28598,7 @@ PrefabInstance:
       objectReference: {fileID: 560737953}
     - target: {fileID: 7190512769958801383, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
       propertyPath: depletionRate
-      value: 0.05
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8570072527846083613, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
       propertyPath: m_Name

@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6326b4a57046e1a03b1b6b74afe309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioDrink: {fileID: 0}
   coffeeSlider: {fileID: 0}
-  depletionRate: 0.07
+  depletionRate: 0.1
   PlayerRef: {fileID: 0}
