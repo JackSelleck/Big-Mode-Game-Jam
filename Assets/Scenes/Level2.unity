@@ -4741,7 +4741,7 @@ PrefabInstance:
       objectReference: {fileID: 938403954}
     - target: {fileID: 7049517502598734457, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
       propertyPath: NextSceneName
-      value: Level4
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 7049517502598734457, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
       propertyPath: availableTasks
