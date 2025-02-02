@@ -10,7 +10,7 @@ namespace System
     public class CoffeeManager : MonoBehaviour
     {
         [SerializeField] private Slider coffeeSlider;
-        [SerializeField] private float depletionRate = 0.6f;
+        [SerializeField] private float depletionRate = 0.2f;
 
         [SerializeField] private BasePlayer PlayerRef;
 
