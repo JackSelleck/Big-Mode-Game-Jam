@@ -5,6 +5,7 @@ namespace Enemy_AI
 {
     public class GhostGreen : GhostBase
     {
+        public AudioSource ghostHit;
         [SerializeField] private Transform SendPlayerBackToOffice;
 
         [SerializeField] private BasePlayer PlayerRef;
@@ -16,6 +17,11 @@ namespace Enemy_AI
         }
         private void GreenGhostAttack()
         {
+            if (ghostHit != null && ghostHit.clip != null)
+            {
+                ghostHit.PlayOneShot(ghostHit.clip);
+            }
+
             PlayerRef.PlayerRespawn();
             
             GhostTouch(this);
