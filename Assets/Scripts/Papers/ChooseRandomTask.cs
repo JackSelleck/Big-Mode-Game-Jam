@@ -32,6 +32,7 @@ public class ChooseRandomTask : MonoBehaviour
     {
         text.enabled = false;
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {    
         if (collision.CompareTag("Papers"))
@@ -45,6 +46,7 @@ public class ChooseRandomTask : MonoBehaviour
     {
         if (collision.CompareTag("Papers") && Input.GetKey(KeyCode.E))
         {
+            text.enabled = false;
             collision.gameObject.SetActive(false);
             Debug.Log("Task Started");
             ChooseTask();
