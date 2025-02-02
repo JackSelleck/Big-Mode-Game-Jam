@@ -13,10 +13,11 @@ namespace System
         [SerializeField] private float depletionRate = 0.6f;
 
         [SerializeField] private BasePlayer PlayerRef;
-        
 
         public UnityAction OnCoffeeRefill;
         public UnityAction OnCoffeeDeplete;
+
+        public static UnityAction<bool> OnCoffeeEnergyBarActive;
 
         private float currentCoffeeValue;
         public static CoffeeManager Instance { get; private set; }

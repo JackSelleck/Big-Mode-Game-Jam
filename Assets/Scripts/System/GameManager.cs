@@ -11,6 +11,7 @@ namespace System
         
         [SerializeField] private GameObject ResumeButton;
         [SerializeField] private GameObject RestartButton;
+        [SerializeField] private GameObject CoffeeEnergyBar;
         
         [SerializeField] private BasePlayer PlayerRef;
         
@@ -28,11 +29,15 @@ namespace System
             PlayerRef.OnPlayerDeath += GameOver;
             esc = playerControls.Player.ESCAPE;
             esc.Enable();
+            
+            CoffeeManager.OnCoffeeEnergyBarActive += ChangeCoffeeBarVisibility;
         }
         private void OnDisable()
         {
             PlayerRef.OnPlayerDeath -= GameOver;
             esc.Disable();
+            
+            CoffeeManager.OnCoffeeEnergyBarActive -= ChangeCoffeeBarVisibility;
         }
         private void Update()
         {
@@ -78,6 +83,11 @@ namespace System
             GameOverUI.SetActive(true);
 
             gameOver = true;
+        }
+        
+        private void ChangeCoffeeBarVisibility(bool isActive)
+        {
+            CoffeeEnergyBar.SetActive(isActive);
         }
     }
 }
