@@ -53,7 +53,7 @@ namespace System
 
         public void CoffeDrain(float energyDrain)
         {
-            currentCoffeeValue = currentCoffeeValue * energyDrain;
+            currentCoffeeValue = currentCoffeeValue - energyDrain;
             coffeeSlider.value = currentCoffeeValue;
             
             OnCoffeeDeplete?.Invoke();
