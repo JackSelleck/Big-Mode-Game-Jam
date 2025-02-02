@@ -53,6 +53,7 @@ namespace System
         }
         public void MainMenu()
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene(0);
         }
         public void RestartGame()

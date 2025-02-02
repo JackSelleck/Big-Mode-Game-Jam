@@ -4260,10 +4260,18 @@ PrefabInstance:
     - target: {fileID: 3749161038108625332, guid: 595b35061c84e6845b9327ee0b45d517, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1205129267}
+    - target: {fileID: 3749161038108625332, guid: 595b35061c84e6845b9327ee0b45d517, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6650697019893411583, guid: 595b35061c84e6845b9327ee0b45d517, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1205129267}
+    - target: {fileID: 6650697019893411583, guid: 595b35061c84e6845b9327ee0b45d517, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
       objectReference: {fileID: 0}
     - target: {fileID: 9145075446117756999, guid: 595b35061c84e6845b9327ee0b45d517, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4272,6 +4280,10 @@ PrefabInstance:
     - target: {fileID: 9171046435315918875, guid: 595b35061c84e6845b9327ee0b45d517, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1205129267}
+    - target: {fileID: 9171046435315918875, guid: 595b35061c84e6845b9327ee0b45d517, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14912,7 +14924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049517502598734457, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
       propertyPath: availableTasks
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14939,6 +14951,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09e00f24770b9bc4bb0f2f7303fcaa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1205129267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6206808070648255681, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
+  m_PrefabInstance: {fileID: 1205129261}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaece561d02844b1b114083476f16532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1212630675
@@ -26155,6 +26178,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2468441987589384639, guid: 7959bfc5921c44047b63de37c5382143, type: 3}
+      propertyPath: m_Volume
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 2755769055381435060, guid: 7959bfc5921c44047b63de37c5382143, type: 3}
       propertyPath: m_Name
       value: AudioSource
