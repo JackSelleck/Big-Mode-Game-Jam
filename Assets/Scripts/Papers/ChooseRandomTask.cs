@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -5,26 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class ChooseRandomTask : MonoBehaviour
 {
-    public List<int> taskOptions = new List<int> {};
+    // public List<int> taskOptions = new List<int> {};
 
     public GameObject officeMap;
 
-    public GameObject writingTask;
+    // public GameObject writingTask;
 
-    public GameObject MazeTask1;
+    // public GameObject MazeTask1;
     public GameObject MazeTask2;
-    public GameObject MazeTask3;
-    public GameObject MazeTask4;
-    public GameObject MazeTask5;
+    // public GameObject MazeTask3;
+    // public GameObject MazeTask4;
+    // public GameObject MazeTask5;
+    //
+    // public GameObject BallTask1;
+    // public GameObject BallTask2;
+    // public GameObject BallTask3;
+    // public GameObject BallTask4;
+    // public GameObject BallTask5;
 
-    public GameObject BallTask1;
-    public GameObject BallTask2;
-    public GameObject BallTask3;
-    public GameObject BallTask4;
-    public GameObject BallTask5;
-
-    public int lastChosenTask; // Store last chosen task
-    public int taskDecider;
+    // public int lastChosenTask; // Store last chosen task
+    // public int taskDecider;
     public TextMeshProUGUI text;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,7 +43,9 @@ public class ChooseRandomTask : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             Debug.Log("Task Started");
-            ChooseTask();        
+            ChooseTask();
+            
+            CoffeeManager.OnCoffeeEnergyBarActive?.Invoke(false);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

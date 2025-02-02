@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -20,10 +21,13 @@ public class DrawingGameCompleted : MonoBehaviour
     IEnumerator wait()
     {
         yield return new WaitForSeconds(1f);
-        taskParent.SetActive(false);
-        officeParent.SetActive(true);
         tasksCompleted.tasksCompleted++;
         LimitPapersHeld.papersHeld--;
+        taskParent.SetActive(false);
+        officeParent.SetActive(true);
+        
+        CoffeeManager.OnCoffeeEnergyBarActive?.Invoke(true);
+
         //SceneManager.LoadScene("Office");
     }
 }
