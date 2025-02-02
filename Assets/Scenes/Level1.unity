@@ -712,7 +712,7 @@ PrefabInstance:
       objectReference: {fileID: 100133101}
     - target: {fileID: 7190512769958801383, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
       propertyPath: depletionRate
-      value: 0.001
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8570072527846083613, guid: f4f15ca2c57d7e14ba549b0389a0ff82, type: 3}
       propertyPath: m_Name
@@ -6797,7 +6797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &772651262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14924,7 +14924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049517502598734457, guid: b47975f99b4fba745989e7501fd2bd25, type: 3}
       propertyPath: availableTasks
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26074,53 +26074,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 772651262}
     - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: BallTask1
-      value: 
-      objectReference: {fileID: 972218480}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: BallTask2
-      value: 
-      objectReference: {fileID: 972218480}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: BallTask3
-      value: 
-      objectReference: {fileID: 972218480}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: BallTask4
-      value: 
-      objectReference: {fileID: 972218480}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: BallTask5
-      value: 
-      objectReference: {fileID: 972218480}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: MazeTask1
-      value: 
-      objectReference: {fileID: 1264018308}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
       propertyPath: MazeTask2
       value: 
       objectReference: {fileID: 1544468832}
     - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: MazeTask3
-      value: 
-      objectReference: {fileID: 215240206}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: MazeTask4
-      value: 
-      objectReference: {fileID: 1095926217}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: MazeTask5
-      value: 
-      objectReference: {fileID: 616757730}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
       propertyPath: officeMap
       value: 
       objectReference: {fileID: 231125540}
-    - target: {fileID: 5225555995023514874, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
-      propertyPath: writingTask
-      value: 
-      objectReference: {fileID: 203574528}
     - target: {fileID: 7825159920801936195, guid: 964fe2b3232bb6b40b8530ee53c34dac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.84
