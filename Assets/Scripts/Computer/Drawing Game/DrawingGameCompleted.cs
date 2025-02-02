@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class DrawingGameCompleted : MonoBehaviour
         LimitPapersHeld.papersHeld--;
         taskParent.SetActive(false);
         officeParent.SetActive(true);
+        
+        CoffeeManager.OnCoffeeEnergyBarActive?.Invoke(true);
 
         //SceneManager.LoadScene("Office");
     }
