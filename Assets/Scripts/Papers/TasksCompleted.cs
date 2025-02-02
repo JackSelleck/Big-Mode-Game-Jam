@@ -9,7 +9,7 @@ public class TasksCompleted : MonoBehaviour
 
     void Update()
     {
-        if (tasksCompleted == availableTasks)
+        if (tasksCompleted >= availableTasks)
         {
             SceneManager.LoadScene(NextSceneName);
         }
