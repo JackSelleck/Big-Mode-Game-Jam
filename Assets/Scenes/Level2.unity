@@ -1552,8 +1552,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2468441987589384639, guid: 7959bfc5921c44047b63de37c5382143, type: 3}
       propertyPath: m_Volume
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 2468441987589384639, guid: 7959bfc5921c44047b63de37c5382143, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 8af03df547c816b47b571dbb3f9da057, type: 3}
+    - target: {fileID: 2468441987589384639, guid: 7959bfc5921c44047b63de37c5382143, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8af03df547c816b47b571dbb3f9da057, type: 3}
     - target: {fileID: 2755769055381435060, guid: 7959bfc5921c44047b63de37c5382143, type: 3}
       propertyPath: m_Name
       value: AudioSource
