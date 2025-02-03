@@ -20,8 +20,13 @@ namespace System
 
         private bool gameOver;
         
+        public static GameManager instance;
+        
         private void Awake()
         {
+            if (instance == null) instance = this;
+            else Destroy(gameObject);
+            
             playerControls = new InputSystem_Actions();
         }
         private void OnEnable()

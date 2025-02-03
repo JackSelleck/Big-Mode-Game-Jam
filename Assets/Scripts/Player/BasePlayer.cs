@@ -13,6 +13,8 @@ namespace Player
         public bool PlayerIsDead { get; private set; }
 
         [SerializeField] private Transform RespawnPoint;
+
+        [SerializeField] private int PaperAmount;
         
         private Rigidbody2D rb;
         private SpriteRenderer sr;
@@ -20,10 +22,12 @@ namespace Player
         public UnityAction OnPlayerDeath;
         public UnityAction OnPlayerRespawn;
         
+        public static BasePlayer Instance { get; private set; }
+        
         private void Start()
         {
-            // if (Instance == null) Instance = this;
-            // else Destroy(gameObject);
+            if (Instance == null) Instance = this;
+            else Destroy(gameObject);
 
             rb = GetComponent<Rigidbody2D>();
             sr = GetComponent<SpriteRenderer>();
@@ -61,5 +65,23 @@ namespace Player
             OnPlayerRespawn?.Invoke();
             // yield return new WaitForSeconds(2);
         }
+
+        public void Save(ref PlayerSaveData data)
+        {
+            data.PaperAmount = PaperAmount;
+        }
+        
+        public void Load(PlayerSaveData data)
+        
+        {
+            PaperAmount = data.PaperAmount;
+        }
     }
+
+    [System.Serializable]
+    public struct PlayerSaveData
+    {
+        public int PaperAmount;
+    }
+    
 }
