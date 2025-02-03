@@ -33,8 +33,6 @@ namespace System
 
         private void Update()
         {
-            Debug.Log("Coffee Slider Value = " + coffeeSlider.value);
-
             if (!(currentCoffeeValue >= 0f)) return;
             
             currentCoffeeValue -= Time.deltaTime * depletionRate;

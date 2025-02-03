@@ -49,4 +49,18 @@ public class BackgroundMusic : MonoBehaviour
         Debug.Log("OnDisable");
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+    private void Update()
+    {
+        // Create a temporary reference to the current scene.
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Retrieve the name of this scene.
+        string sceneName = currentScene.name;
+
+        if (sceneName == "Cutscene part 2")
+        {
+            transform.gameObject.SetActive(false);
+        }
+    }
 }
