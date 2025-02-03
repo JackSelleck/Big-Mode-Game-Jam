@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         playerControls = new InputSystem_Actions();
@@ -47,13 +47,15 @@ public class PlayerMovement : MonoBehaviour
         // if input is not null
         if (PlayerInputHandler.MoveInput != Vector2.zero)
         {
+            animator.SetBool("Move", true);
            // make the animation set to walking
-           // UpdateAnimationDirection();
+              //UpdateAnimationDirection();
         }
         else
         {
-           // and the animation for idling is set
-           // animator.SetBool("isMoving", false);
+            animator.SetBool("Move", false);
+            // and the animation for idling is set
+            // animator.SetBool("isMoving", false);
         }
 
         FlipSpriteOnDestination();
@@ -69,9 +71,8 @@ public class PlayerMovement : MonoBehaviour
     {
 
         // Set the animation parameters based on animationIndex
-        animator.SetFloat("moveX", PlayerInputHandler.MoveInput.x);
-        animator.SetFloat("moveY", PlayerInputHandler.MoveInput.y);
-        animator.SetBool("isMoving", true);
+        //animator.SetFloat("Speed", PlayerInputHandler.MoveInput.x);
+       // animator.SetFloat("Speed", PlayerInputHandler.MoveInput.y);
 
     }
 
