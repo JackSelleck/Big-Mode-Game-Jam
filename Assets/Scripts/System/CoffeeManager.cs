@@ -33,6 +33,8 @@ namespace System
 
         private void Update()
         {
+            Debug.Log("Coffee Slider Value = " + coffeeSlider.value);
+
             if (!(currentCoffeeValue >= 0f)) return;
             
             currentCoffeeValue -= Time.deltaTime * depletionRate;
@@ -63,6 +65,13 @@ namespace System
             coffeeSlider.value = currentCoffeeValue;
             
             OnCoffeeDeplete?.Invoke();
+
+            // Check if coffee is depleted and trigger death immediately
+            if (currentCoffeeValue <= 0 && PlayerRef != null && !PlayerRef.PlayerIsDead)
+            {
+                Debug.Log("Coffee depleted due to enemy! Game Over");
+                PlayerRef.OnPlayerDeath?.Invoke();
+            }
         }
     }
 }

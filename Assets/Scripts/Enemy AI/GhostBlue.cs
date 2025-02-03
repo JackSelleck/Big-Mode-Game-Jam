@@ -20,6 +20,7 @@ namespace Enemy_AI
             {
                 ghostHit.PlayOneShot(ghostHit.clip);
             }
+
             CoffeeManager.Instance.CoffeDrain(EnergyDrain);
             
             GhostTouch(this);
